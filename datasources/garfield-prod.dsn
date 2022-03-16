@@ -1,0 +1,6 @@
+#DataSourceSettings#
+#LocalDataSource: garfield_db@production
+#BEGIN#
+<data-source source="LOCAL" name="garfield_db@production" group="cat-production" uuid="d95739b9-85b7-4d62-b7d9-4658fa5725bd"><database-info product="PostgreSQL" version="10.14 (Ubuntu 10.14-1.pgdg18.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="10.14" exact-driver-version="42.2"><identifier-quote-string>&quot;</identifier-quote-string></database-info><case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/><driver-ref>postgresql</driver-ref><synchronize>true</synchronize><jdbc-driver>org.postgresql.Driver</jdbc-driver><jdbc-url>jdbc:postgresql://localhost:7770/garfield_db</jdbc-url><secret-storage>session</secret-storage><user-name>froske</user-name><schema-mapping><introspection-scope><node negative="1"><node kind="database" qname="@"><node kind="schema" qname="@"/></node><node kind="database" qname="garfield_db"><node kind="schema" negative="1"/></node></node></introspection-scope></schema-mapping><working-dir>$ProjectFileDir$</working-dir></data-source>
+#END#
+

@@ -1,0 +1,6 @@
+#DataSourceSettings#
+#LocalDataSource: garfield_db_test@staging
+#BEGIN#
+<data-source source="LOCAL" name="garfield_db_test@staging" group="cat-staging" uuid="dcacb7fc-4956-4c21-accf-45cf6cb023b0"><database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0"/><driver-ref>postgresql</driver-ref><synchronize>true</synchronize><jdbc-driver>org.postgresql.Driver</jdbc-driver><jdbc-url>jdbc:postgresql://localhost:7771/garfield_db_test</jdbc-url><schema-mapping/><init-script>SET ROLE TO ADMIN; SELECT set_user(&apos;garfield&apos;);</init-script></data-source>
+#END#
+

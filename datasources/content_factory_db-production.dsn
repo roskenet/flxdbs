@@ -1,0 +1,6 @@
+#DataSourceSettings#
+#LocalDataSource: content_factory_db@production
+#BEGIN#
+<data-source source="LOCAL" name="content_factory_db@production" group="production" uuid="e48dbd86-ef8a-4a3e-9c6c-1e0efa238df2"><database-info product="PostgreSQL" version="13.5 (Ubuntu 13.5-1.pgdg18.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.22" dbms="POSTGRES" exact-version="13.5" exact-driver-version="42.2"><identifier-quote-string>&quot;</identifier-quote-string></database-info><case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/><driver-ref>postgresql</driver-ref><synchronize>true</synchronize><jdbc-driver>org.postgresql.Driver</jdbc-driver><jdbc-url>jdbc:postgresql://localhost:7779/content_factory_db</jdbc-url><secret-storage>session</secret-storage><user-name>froske</user-name><schema-mapping><introspection-scope><node negative="1"><node kind="database" qname="@"><node kind="schema" qname="@"/></node><node kind="database" qname="content_factory_db"><node kind="schema"><name qname="zcpe_data"/><name qname="zprod_data"/><name qname="zz_commons"/><name qname="zz_utils"/></node></node></node></introspection-scope></schema-mapping><working-dir>$ProjectFileDir$</working-dir></data-source>
+#END#
+

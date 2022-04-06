@@ -1,4 +1,5 @@
-SET ROLE TO ADMIN; SELECT set_user('garfield');
+SET ROLE TO ADMIN;
+SELECT set_user('garfield');
 
 select m.id as media_id, p1.value as sku, p2.value as sort_order, p3.value as consumer,
     f.location as location, t.tag as tag, f.mime_type as mime_type from media m
@@ -17,3 +18,9 @@ select m.id as media_id, p1.value as sku, p2.value as sort_order, p3.value as co
 select * from media where id = 71946631;
 select * from media_property where media_id = 71946631;
 select * from media_property where key='sku' and value = 'P2K14D00S-K11';
+
+-- RESET queue
+BEGIN;
+update queued_action set version = 40 where version >= 50;
+ROLLBACK;
+-- COMMIT;

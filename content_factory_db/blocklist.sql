@@ -1,6 +1,7 @@
 ---| BLOCKLIST INFO: |---------------------------------------------------------
 select * from zprod_data.blacklist where b_word = :WORD ORDER BY b_language_code;
 select * from zprod_data.blacklist where b_word = :WORD || '_blocked';
+SELECT * from zprod_data.blacklist where b_word ILIKE :WORD;
 
 ---| UNBLOCK: |----------------------------------------------------------------
 begin;

@@ -26,3 +26,17 @@ DELETE FROM zprod_data.article_config
 WHERE ac_config_sku = :SKU;
 -- COMMIT;
 ROLLBACK;
+
+SELECT
+    indexname,
+    indexdef
+FROM
+    pg_indexes
+WHERE
+    tablename = 'bulk_operation_history';
+
+CREATE INDEX CONCURRENTLY IF NOT EXISTS task_lock_tl_user_name_idx ON zprod_data.task_lock (tl_user_name);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS bulk_operation_history_boh_uploading_user_idx ON zprod_data.bulk_operation_history (boh_uploading_user);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS translation_status_ts_editor_id_idx ON zprod_data.translation_status (ts_editor_id);
+
+EXPLAIN SELECT * from zprod_data.bulk_operation_history WHERE boh_uploading_user <> 'anonymous.user' AND bulk_operation_history.boh_created < '2022-03-15';

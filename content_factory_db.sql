@@ -14,6 +14,8 @@ AND   article_consumer.ac_article_id = article.a_id
 AND   article.a_sku = :SKU;
 -------------------------------------------------------------------------------
 
+SELECT * FROM zprod_data.article;
+
 SELECT * FROM zprod_data.editor;
 
 BEGIN;

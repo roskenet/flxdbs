@@ -1,0 +1,6 @@
+#DataSourceSettings#
+#LocalDataSource: tracking_api_db@staging
+#BEGIN#
+<data-source source="LOCAL" name="tracking_api_db@staging" group="cat-staging" uuid="b96862e6-ef6f-4983-a3f7-10e9cd5b2ded"><database-info product="PostgreSQL" version="10.21 (Ubuntu 10.21-1.pgdg18.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.22" dbms="POSTGRES" exact-version="10.21" exact-driver-version="42.2"><identifier-quote-string>&quot;</identifier-quote-string></database-info><case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/><driver-ref>postgresql</driver-ref><synchronize>true</synchronize><jdbc-driver>org.postgresql.Driver</jdbc-driver><jdbc-url>jdbc:postgresql://localhost:7776/tracking_api_release_db</jdbc-url><user-name>froske</user-name><schema-mapping><introspection-scope><node kind="database" qname="@"><node kind="schema" qname="@"/></node></introspection-scope></schema-mapping><working-dir>$ProjectFileDir$</working-dir></data-source>
+#END#
+

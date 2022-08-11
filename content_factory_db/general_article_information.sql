@@ -1,3 +1,4 @@
+-- CONNECTION ? --
 SELECT * FROM zprod_data.article_simple LIMIT 10;
 
 SELECT * FROM zprod_data.article_simple_size LIMIT 10;
@@ -10,6 +11,7 @@ select * from zprod_data.article_consumer where ac_article_id = (
     SELECT a_id from zprod_data.article where a_sku = :SKU
     );
 
+-- Media for an SKU ---
 SELECT * FROM zprod_data.article_media where am_article_consumer_id = (
     select ac_id from zprod_data.article_consumer where ac_article_id = (
         SELECT a_id from zprod_data.article where a_sku = :SKU

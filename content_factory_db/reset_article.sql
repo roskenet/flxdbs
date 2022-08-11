@@ -1,10 +1,5 @@
-
-
 -- The SKU
 -- ZZO128510-E00
-
-HU151C004-A12
-HU151C005-A12
 
 select * from zprod_data.article where a_sku = :SKU;
 -- 39084569

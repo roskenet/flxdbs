@@ -3,7 +3,18 @@ SELECT * FROM zprod_data.article_consumer WHERE ac_article_id = (
     SELECT a_id FROM zprod_data.article WHERE a_sku = :SKU
     );
 -------------------------------------------------------------------------------
+SELECT * FROM zprod_data.bulk_operation_audit LIMIT 10;
+SELECT * FROM zprod_data.bulk_operation_history WHERE boh_created NOTNULL ORDER BY boh_created DESC LIMIT 10;
 
+SELECT * FROM zprod_data.bulk_operation_history WHERE boh_created ISNULL ORDER BY boh_action_finished DESC LIMIT 10;
+
+
+--| Bulk Operation Cleanups |--------------------------------------------------
+BEGIN;
+DELETE FROM zprod_data.bulk_operation_history
+       WHERE boh_created ISNULL
+         AND boh_successful_images = 0;
+COMMIT;
 
 -- Article Production Station for SKU
 SELECT * FROM zprod_data.article_production_station,
@@ -14,7 +25,7 @@ AND   article_consumer.ac_article_id = article.a_id
 AND   article.a_sku = :SKU;
 -------------------------------------------------------------------------------
 
-SELECT * FROM zprod_data.article;
+SELECT * FROM zprod_data.article LIMIT 10;
 
 SELECT * FROM zprod_data.editor;
 

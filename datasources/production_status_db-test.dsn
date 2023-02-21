@@ -1,0 +1,6 @@
+#DataSourceSettings#
+#LocalDataSource: production_status_db@staging
+#BEGIN#
+<data-source source="LOCAL" name="production_status_db@staging" group="cat-test" uuid="8b5ade78-0a36-4f8d-9f1e-8ce9333747ee"><database-info product="PostgreSQL" version="12.13 (Ubuntu 12.13-1.pgdg22.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.5.0" dbms="POSTGRES" exact-version="12.13" exact-driver-version="42.5"><identifier-quote-string>&quot;</identifier-quote-string></database-info><case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/><driver-ref>postgresql</driver-ref><synchronize>true</synchronize><jdbc-driver>org.postgresql.Driver</jdbc-driver><jdbc-url>jdbc:postgresql://localhost:7782/postgres</jdbc-url><secret-storage>session</secret-storage><user-name>froske</user-name><schema-mapping><introspection-scope><node negative="1"><node kind="database" qname="@"><node kind="schema" qname="@"/></node><node kind="database" qname="production_status_db"><node kind="schema"><name qname="cat_queue"/><name qname="information_schema"/><name qname="public"/></node></node></node></introspection-scope></schema-mapping><working-dir>$ProjectFileDir$</working-dir></data-source>
+#END#
+

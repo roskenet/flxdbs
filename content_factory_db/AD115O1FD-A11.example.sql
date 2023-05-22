@@ -20,3 +20,4 @@ SELECT * from zprod_data.article_attribute_value order by aav_id limit 1;
 SELECT * from zprod_data.article order by a_id desc limit 2000;
 -- 69860613
 SELECT * from zprod_data.article_attribute_value where aav_article_id = 69860806;
+SELECT * from zprod_data.article LIMIT 100;

@@ -18,6 +18,48 @@ SELECT * FROM zprod_data.article_media where am_article_consumer_id = (
     )
 );
 
+-- CAT-8782 : Remove garfield import history:
+
+select * from zprod_data.garfield_media_import_history where gmih_garfield_media_id IN (
+select m_garfield_media_id from zprod_data.media where m_id IN (
+   SELECT am_media_id FROM zprod_data.article_media where am_article_consumer_id = (
+    select ac_id from zprod_data.article_consumer where ac_article_id = (
+        SELECT a_id from zprod_data.article where a_sku = :SKU
+ )
+)
+)
+);
+
+select * from zprod_data.media where m_id IN (
+   SELECT am_media_id FROM zprod_data.article_media where am_article_consumer_id = (
+    select ac_id from zprod_data.article_consumer where ac_article_id = (
+        SELECT a_id from zprod_data.article where a_sku = :SKU
+    )
+  )
+);
+
+BEGIN;
+delete from zprod_data.garfield_media_import_history where gmih_garfield_media_id IN (
+    select m_garfield_media_id from zprod_data.media where m_id IN (
+        SELECT am_media_id FROM zprod_data.article_media where am_article_consumer_id = (
+            select ac_id from zprod_data.article_consumer where ac_article_id = (
+                SELECT a_id from zprod_data.article where a_sku = :SKU
+            )
+        )
+    )
+);
+
+DELETE from zprod_data.media where m_id IN (
+    SELECT am_media_id FROM zprod_data.article_media where am_article_consumer_id = (
+        select ac_id from zprod_data.article_consumer where ac_article_id = (
+            SELECT a_id from zprod_data.article where a_sku = :SKU
+        )
+    )
+);
+-- COMMIT
+
+
+
 select * from zprod_data.media where m_id IN (155, 156, 158, 157, 160, 159);
 
 SELECT am_id, am_article_consumer_id,

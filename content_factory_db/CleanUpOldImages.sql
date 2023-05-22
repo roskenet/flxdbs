@@ -1,0 +1,1 @@
+SELECT * FROM zprod_data.media order by m_created LIMIT 10;

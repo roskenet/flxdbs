@@ -11,3 +11,7 @@ WHERE id IN (
     );
 ROLLBACK;
 -- COMMIT;
+
+-- TEMP:
+SELECT * FROM queued_action ORDER BY id DESC LIMIT 3;
+-- 1.174.999.980 out of 2.147.483.647

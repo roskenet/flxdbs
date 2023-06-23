@@ -1,5 +1,6 @@
+--| General PostgreSQL maintenance scripts |-------------------------------------------
 SELECT * FROM pg_database;
 
-CREATE DATABASE article_production_backlog OWNER postgres;
+CREATE DATABASE :DBNAME OWNER :OWNER;
 
-CREATE DATABASE garfield OWNER postgres;
+SELECT * FROM pg_roles;

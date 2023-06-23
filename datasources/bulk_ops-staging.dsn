@@ -1,0 +1,5 @@
+#DataSourceSettings#
+#LocalDataSource: cat_bulk_ops@staging
+#BEGIN#
+<data-source source="LOCAL" name="cat_bulk_ops@staging" group="cat-staging" uuid="d75ed8ee-f18a-461f-b93a-8dc71d2cedcc"><database-info product="PostgreSQL" version="10.23 (Ubuntu 10.23-1.pgdg22.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.5.0" dbms="POSTGRES" exact-version="10.23" exact-driver-version="42.5"><identifier-quote-string>&quot;</identifier-quote-string></database-info><case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/><driver-ref>postgresql</driver-ref><synchronize>true</synchronize><jdbc-driver>org.postgresql.Driver</jdbc-driver><jdbc-url>jdbc:postgresql://localhost:7778/cat_bulk_ops_test</jdbc-url><secret-storage>session</secret-storage><user-name>froske</user-name><schema-mapping><introspection-scope><node negative="1"><node kind="database" qname="@"><node kind="schema" qname="@"/></node><node kind="database" qname="cat_bulk_ops_test"><node kind="schema" qname="public"/></node></node></introspection-scope></schema-mapping><working-dir>$ProjectFileDir$</working-dir></data-source>
+#END#

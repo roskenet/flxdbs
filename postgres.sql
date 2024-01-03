@@ -1,3 +1,3 @@
-SELECT * FROM pg_database;
+-- | Hello World
 
-CREATE DATABASE article_production_backlog OWNER postgres;
+SELECT 'Hello World' as hello;

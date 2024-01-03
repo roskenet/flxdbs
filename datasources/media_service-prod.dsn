@@ -1,5 +1,0 @@
-#DataSourceSettings#
-#LocalDataSource: media_service@staging
-#BEGIN#
-<data-source source="LOCAL" name="media_service@staging" group="cat-staging" uuid="f784468e-9955-4b58-9ddc-a933b1435a39"><database-info product="PostgreSQL" version="12.14 (Ubuntu 12.14-1.pgdg22.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="12.14" exact-driver-version="42.6"><identifier-quote-string>&quot;</identifier-quote-string></database-info><case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/><driver-ref>postgresql</driver-ref><synchronize>true</synchronize><jdbc-driver>org.postgresql.Driver</jdbc-driver><jdbc-url>jdbc:postgresql://localhost:7784/backstage_media_service_db_test</jdbc-url><secret-storage>master_key</secret-storage><user-name>froske</user-name><schema-mapping><introspection-scope><node kind="database" qname="@"><node kind="schema" qname="@"/></node></introspection-scope></schema-mapping><working-dir>$ProjectFileDir$</working-dir></data-source>
-#END#

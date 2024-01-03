@@ -7,3 +7,7 @@ CREATE DATABASE :DBNAME OWNER :OWNER;
 SELECT * FROM pg_roles;
 
 -- DROP DATABASE :DBNAME;
+
+-- | Hello World
+
+SELECT 'Hello World' as hello;

@@ -16,8 +16,8 @@ insert into member values (1, 'a-member', 1),
 select team.name, member.id, member.name from member, team
 where member.t_it = team.id;
 
-CREATE INDEX ON team using HASH(id)
-CREATE INDEX ON member using HASH (t_it)
+CREATE INDEX ON team using HASH(id);
+CREATE INDEX ON member using HASH (t_it);
 
 CREATE INDEX on member (t_it);
 
